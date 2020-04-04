@@ -1,30 +1,41 @@
-package com.palindrome.string;
+
 import java.util.*;
 /* This program that receives a word as an input from the user and checks if it is a 
 palindrome: if it reads the same backward as forward. */
-public class Palin {
+public class Palindrome {
 
     public static void main(String[] args) {
 
-    	System.out.println("\n*********   Palindrome is or not?   *********\n");
-    	Scanner sc = new Scanner(System.in);
+        boolean x = true;
 
-    	System.out.println("\nEnter a word\n ");
+        while (x = true) {
 
-    	String str = sc.nextLine();
-    	String reverseStr = "";
+    	  System.out.println("\n*********   Palindrome is or not?   *********\n");
+    	  Scanner sc = new Scanner(System.in);
 
-    	for ( int i = str.lenght() - 1; i >= 0; i --) {
-    		reverseStr = reverseStr + string.charAt(i);
-    	}
+    	  System.out.println("\nEnter a word:\n ");
 
-        if (str.equals(reverseStr))
-    	    System.out.println(string+" is a palindrome"); 
+    	  String str = sc.nextLine();
+    	  String reverseStr = "";
+
+          str = str.replace(" ", ""); 
+          str = str.toLowerCase();
+  
+          //For methode used for limits
+
+    	  for ( int i = str.length() - 1; i >= 0; i --) {
+    		  reverseStr = reverseStr + str.charAt(i);
+    	  }
+
+          //If and else for exception whether its a palindrome or not
+ 
+          if (str.equals(reverseStr))
+    	     System.out.println(str + " is a palindrome\n"); 
 
     	
-        else 
-            System.out.println(string+" is not a palindrome");
+          else 
+             System.out.println(str + " is not a palindrome\n");
+        }
     
     }
 }
-
