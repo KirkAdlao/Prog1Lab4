@@ -18,6 +18,9 @@ public class Email {
 
         public static boolean valEmail (String input) {
 
+         //A regular expression is a special sequence of characters that helps you match or 
+         //find other strings or sets of strings, using a specialized syntax held in a pattern. 
+
     	  String emailRegex = "^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}$";
     	  Pattern emailPat = Pattern.compile(emailRegex,Pattern.CASE_INSENSITIVE);
     	  Matcher matcher = emailPat.matcher(input);
